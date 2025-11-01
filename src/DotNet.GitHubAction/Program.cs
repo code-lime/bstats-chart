@@ -30,8 +30,9 @@ try
 
     await result.WithNotParsed(_ =>
     {
-        var help = HelpText.AutoBuild(result).ToString();
-        Log.Logger.Information(help);
+        var help = HelpText.AutoBuild(result);
+        help.Heading = new HeadingInfo("BStatsChart");
+        Log.Logger.Information(help.ToString());
         Environment.Exit(2);
     })
     .WithParsedAsync(async options =>
