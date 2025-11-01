@@ -13,5 +13,8 @@ LABEL com.github.actions.color="blue"
 
 # Relayer the .NET SDK, anew with the build output
 FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine
-COPY --from=build-env /out .
-ENTRYPOINT [ "dotnet", "/DotNet.GitHubAction.dll" ]
+
+WORKDIR /app/
+
+COPY --from=build-env /out/ /app/
+ENTRYPOINT [ "dotnet", "/app/DotNet.GitHubAction.dll" ]
