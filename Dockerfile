@@ -7,7 +7,7 @@ RUN dotnet publish ./src/DotNet.GitHubAction/DotNet.GitHubAction.csproj -c Relea
 
 # Label as GitHub action
 LABEL com.github.actions.name="bStats Chart"
-LABEL com.github.actions.description="-"
+LABEL com.github.actions.description="Create custom chart image from bstats.org"
 LABEL com.github.actions.icon="bar-chart-2"
 LABEL com.github.actions.color="blue"
 

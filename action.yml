@@ -1,5 +1,5 @@
 name: 'bStats Chart'
-description: '-'
+description: 'Create custom chart image from bstats.org'
 branding:
   icon: bar-chart-2
   color: blue
