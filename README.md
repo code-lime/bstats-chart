@@ -2,6 +2,12 @@
 
 A GitHub Action that generates custom chart images from [bStats.org](https://bstats.org) plugin statistics data.
 
+## Example Output
+
+![Example Chart](https://raw.githubusercontent.com/code-lime/charts/master/output/bstats/velocircon.png)
+
+*Example chart generated from bStats plugin data*
+
 ## Features
 
 - 📊 Create beautiful line charts from bStats plugin data
