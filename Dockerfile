@@ -17,4 +17,4 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine
 WORKDIR /app/
 
 COPY --from=build-env /out .
-ENTRYPOINT [ "dotnet", "DotNet.GitHubAction.dll" ]
+ENTRYPOINT [ "dotnet", "/app/DotNet.GitHubAction.dll" ]
