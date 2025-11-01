@@ -25,5 +25,3 @@ jobs:
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: Actions-R-Us/actions-tagger@v2
