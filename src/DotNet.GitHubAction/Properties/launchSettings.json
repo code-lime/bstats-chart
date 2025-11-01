@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DotNet.GitHubAction": {
+      "commandName": "Project",
+      "commandLineArgs": "--plugin-id 26312\r\n--chart-keys servers,players\r\n--days 100\r\n--width 800\r\n--height 200\r\n--output-file out.png"
+    }
+  }
+}

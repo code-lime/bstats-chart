@@ -1,0 +1,44 @@
+name: 'bStats Chart'
+description: '-'
+branding:
+  icon: bar-chart-2
+  color: blue
+inputs:
+  plugin-id:
+    description: 'Plugin id (number) from bstats.org'
+    required: true
+  chart-key:
+    description: "Chart keys separated by ','. E.g. 'servers,players'"
+    required: false
+    default: 'servers'
+  output-file:
+    description: 'Created PNG image path'
+    required: true
+  days:
+    description: 'Total days on chart'
+    required: false
+    default: '100'
+  width:
+    description: 'Output image width'
+    required: false
+    default: '800'
+  height:
+    description: 'Output image height'
+    required: false
+    default: '200'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - '--plugin-id'
+  - ${{ inputs.plugin-id }}
+  - '--chart-key'
+  - ${{ inputs.chart-key }}
+  - '--output-file'
+  - ${{ inputs.output-file }}
+  - '--days'
+  - ${{ inputs.days }}
+  - '--width'
+  - ${{ inputs.width }}
+  - '--height'
+  - ${{ inputs.height }}
