@@ -3,7 +3,7 @@ name: Auto Release
 on:
   push:
     tags:
-      - 'v?[0-9]+.[0-9]+.[0-9]+'
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -25,3 +25,6 @@ jobs:
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update version tag
+        uses: rickstaa/action-update-semver@v1
