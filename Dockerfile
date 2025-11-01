@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build-env
 
 # Copy everything and publish the release (publish implicitly restores and builds)
 COPY . ./
-RUN dotnet publish ./src/DotNet.GitHubAction/DotNet.GitHubAction.csproj -c Release -o out --no-self-contained
+RUN dotnet publish ./src/DotNet.GitHubAction/DotNet.GitHubAction.csproj -c Release -o /out --no-self-contained
 
 # Label as GitHub action
 LABEL com.github.actions.name="bStats Chart"
@@ -16,5 +16,5 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine
 
 WORKDIR /app/
 
-COPY --from=build-env /out/ /app/
-ENTRYPOINT [ "dotnet", "/app/DotNet.GitHubAction.dll" ]
+COPY --from=build-env /out .
+ENTRYPOINT [ "dotnet", "DotNet.GitHubAction.dll" ]
