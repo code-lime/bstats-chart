@@ -27,4 +27,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: Actions-R-Us/actions-tagger@v2
-        with:
