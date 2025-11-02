@@ -74,7 +74,7 @@ jobs:
 
 ```yaml
 - name: Generate bStats Chart
-  uses: code-lime/bstats-chart@main
+  uses: code-lime/bstats-chart@v1
   with:
     plugin-id: 12345
     chart-keys: 'servers'
@@ -85,7 +85,7 @@ jobs:
 
 ```yaml
 - name: Generate bStats Chart
-  uses: code-lime/bstats-chart@main
+  uses: code-lime/bstats-chart@v1
   with:
     plugin-id: 12345
     chart-keys: 'servers,players'
